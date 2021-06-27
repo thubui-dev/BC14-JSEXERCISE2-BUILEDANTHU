@@ -1,0 +1,61 @@
+/* EXERCISE 1  */
+input {
+    text-align: center ;
+}
+
+button {
+    background-color: #007bff;
+    cursor: pointer;
+    border: 1px solid #007bff ;
+    border-radius: 8px;
+    color: white;
+}
+
+
+/* EXERCISE 2  */
+.exercise2-section {
+    margin-top: 50px;
+}
+
+.show-info {
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* EXERCISE 3  */
+.exercise3-section {
+    margin-top: 50px;
+}
+
+.exercise3-section button {
+    background-color: #28a745;
+}
+
+/* EXERCISE 4  */
+.exercise4-section {
+    margin-top: 50px;
+}
+
+.exercise4-section button {
+    background-color:#ffc107;
+    border: 1px solid #ffc107 ;
+}
+
+.hide {
+    display: none;
+}
+
+/* EXERCISE 5  */
+.exercise5-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.exercise5-section button {
+    background-color: gray;
+    border: 1px solid gray ;
+}
+
+

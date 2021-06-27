@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- BS4  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- EXERCISE 1 -->
+    <div class="container">
+        <div class="card w-50 mx-auto">
+            <div class="card-header bg-primary text-light text-center">
+                CALCULATION THE SALARY OF PER STAFF
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <span>Salary: $100.000/day</span> <br>
+                    <label>The number of working days:</label>
+                    <select class="form-control" id="textJs">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">28</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>    
+                    </select>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateMoney()">Submit</button>
+                </div>
+                <p id="demo"></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- EXERCISE 2 -->
+    <div class="container">
+        <div class="card w-50 mx-auto exercise2-section">
+            <div class="card-header bg-primary text-light text-center">
+                THE AVERGARE VALUE
+            </div>
+            <div class="card-body">
+                <div class="form-group text-center">           
+                    <label>INPUT 5 NUMBER IN PER BLANK</label> <br>
+                    1)<input id="numberFirst" type="number"><br>
+                    2)<input id="numberSecond" type="number"><br>
+                    3)<input id="numberThird" type="number"><br>
+                    4)<input id="numberFourth" type="number"><br>
+                    5)<input id="numberFifth" type="number"><br>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateNumber()">Press here</button>
+                </div>
+                <div class="show-info">
+                    <p id="demo2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXERCISE 3 -->
+    <div class="container">
+        <div class="card w-50 mx-auto exercise3-section">
+            <div class="card-header bg-success text-light text-center">
+                EXCHANGE TABLE
+            </div>
+            <div class="card-body">
+                <div class="form-group text-center"> 
+                    <span>USD rate: 23.500 VND/USD</span> <br>          
+                    <label>Amount of USD:</label>
+                    <input id="exchangeUsd" type="number">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="exchangeMoney()">Exchange rate</button>
+                </div>
+                <p id="demo3"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXERCISE 4 -->
+    <div class="container">
+        <div class="card w-50 mx-auto exercise4-section">
+            <div class="card-header bg-warning text-light text-center">
+                CALCULATION TABLE
+            </div>
+            <div class="card-body">
+                <div class="form-group text-center"> 
+                    <div>
+                        <label>Width of Rectangle:</label>
+                        <input id="widthRectangle" type="number">
+                    </div>          
+                    <div>
+                        <label>Height of Rectangle:</label>
+                        <input id="heightRectangle" type="number">
+                    </div> 
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateRectangle()">Calculate</button>
+                </div>
+                <div class="hide" id="result">
+                    <p>Area of Rectangle: <span id="demo4"></span></p>
+                    <p>Perimeter of Rectangle: <span id="demo5"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXERCISE 5 -->
+    <div class="container">
+        <div class="card w-50 mx-auto exercise5-section">
+            <div class="card-header bg-danger text-light text-center">
+                SUM OF NUMBERS
+            </div>
+            <div class="card-body">
+                <div class="form-group text-center"> 
+                    <input id="add_number" type="text" maxlength="2">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateSum()">Result</button>
+                </div>
+                <p id="demo6"></p>
+            </div>
+        </div>
+    </div>
+    
+     <!-- jQuery and Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <script src="./js/exercise2.js"></script>
+    
+
+</body>
+</html>
